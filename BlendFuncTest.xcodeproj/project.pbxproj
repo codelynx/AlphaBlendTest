@@ -11,6 +11,11 @@
 		CC9A42B120138A0500BDA389 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9A42B020138A0500BDA389 /* ViewController.swift */; };
 		CC9A42B320138A0500BDA389 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC9A42B220138A0500BDA389 /* Assets.xcassets */; };
 		CC9A42B620138A0500BDA389 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC9A42B420138A0500BDA389 /* Main.storyboard */; };
+		CC9A42C02013916900BDA389 /* texture1.png in Resources */ = {isa = PBXBuildFile; fileRef = CC9A42BE2013916900BDA389 /* texture1.png */; };
+		CC9A42C12013916900BDA389 /* texture2.png in Resources */ = {isa = PBXBuildFile; fileRef = CC9A42BF2013916900BDA389 /* texture2.png */; };
+		CC9A42C32013BE5A00BDA389 /* NSImage+Z.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9A42C22013BE5A00BDA389 /* NSImage+Z.swift */; };
+		CC9A42C52013D5FF00BDA389 /* texture3.png in Resources */ = {isa = PBXBuildFile; fileRef = CC9A42C42013D5FF00BDA389 /* texture3.png */; };
+		CC9A42C82015A4A800BDA389 /* texture4.png in Resources */ = {isa = PBXBuildFile; fileRef = CC9A42C72015A4A800BDA389 /* texture4.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +26,11 @@
 		CC9A42B520138A0500BDA389 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CC9A42B720138A0500BDA389 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC9A42B820138A0500BDA389 /* BlendFuncTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BlendFuncTest.entitlements; sourceTree = "<group>"; };
+		CC9A42BE2013916900BDA389 /* texture1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = texture1.png; sourceTree = "<group>"; };
+		CC9A42BF2013916900BDA389 /* texture2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = texture2.png; sourceTree = "<group>"; };
+		CC9A42C22013BE5A00BDA389 /* NSImage+Z.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSImage+Z.swift"; sourceTree = "<group>"; };
+		CC9A42C42013D5FF00BDA389 /* texture3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = texture3.png; sourceTree = "<group>"; };
+		CC9A42C72015A4A800BDA389 /* texture4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = texture4.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,11 +64,16 @@
 			isa = PBXGroup;
 			children = (
 				CC9A42AE20138A0500BDA389 /* AppDelegate.swift */,
-				CC9A42B020138A0500BDA389 /* ViewController.swift */,
 				CC9A42B220138A0500BDA389 /* Assets.xcassets */,
-				CC9A42B420138A0500BDA389 /* Main.storyboard */,
-				CC9A42B720138A0500BDA389 /* Info.plist */,
 				CC9A42B820138A0500BDA389 /* BlendFuncTest.entitlements */,
+				CC9A42B720138A0500BDA389 /* Info.plist */,
+				CC9A42B420138A0500BDA389 /* Main.storyboard */,
+				CC9A42C22013BE5A00BDA389 /* NSImage+Z.swift */,
+				CC9A42BE2013916900BDA389 /* texture1.png */,
+				CC9A42BF2013916900BDA389 /* texture2.png */,
+				CC9A42C42013D5FF00BDA389 /* texture3.png */,
+				CC9A42C72015A4A800BDA389 /* texture4.png */,
+				CC9A42B020138A0500BDA389 /* ViewController.swift */,
 			);
 			path = BlendFuncTest;
 			sourceTree = "<group>";
@@ -123,7 +138,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC9A42B320138A0500BDA389 /* Assets.xcassets in Resources */,
+				CC9A42C52013D5FF00BDA389 /* texture3.png in Resources */,
+				CC9A42C82015A4A800BDA389 /* texture4.png in Resources */,
 				CC9A42B620138A0500BDA389 /* Main.storyboard in Resources */,
+				CC9A42C12013916900BDA389 /* texture2.png in Resources */,
+				CC9A42C02013916900BDA389 /* texture1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,6 +155,7 @@
 			files = (
 				CC9A42B120138A0500BDA389 /* ViewController.swift in Sources */,
 				CC9A42AF20138A0500BDA389 /* AppDelegate.swift in Sources */,
+				CC9A42C32013BE5A00BDA389 /* NSImage+Z.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
