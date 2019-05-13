@@ -129,11 +129,11 @@ class ViewController: NSViewController {
 
 		self.sourcePopup.removeAllItems()
 		self.sourcePopup.addItems(withTitles: (0..<textures.count).map { "Image \($0 + 1)" })
-		self.sourcePopup.selectItem(at: textures.index(of: sourceImage)!)
+		self.sourcePopup.selectItem(at: textures.firstIndex(of: sourceImage)!)
 
 		self.destinationPopup.removeAllItems()
 		self.destinationPopup.addItems(withTitles: (0..<textures.count).map { "Image \($0 + 1)" })
-		self.destinationPopup.selectItem(at: textures.index(of: destinationImage)!)
+		self.destinationPopup.selectItem(at: textures.firstIndex(of: destinationImage)!)
 	}
 
 	override func viewWillAppear() {
@@ -168,7 +168,7 @@ class ViewController: NSViewController {
 	
 	func blend(source S: float4, destination D: float4) -> float4 {
 		let Ra = S.a +  D.a * (1.0 - S.a)
-		let Rrgb: float3 = Ra == 0 ? float3(0) : ((S.rgb * S.a) + (D.rgb * D.a * (1.0 - S.a) )) / Ra
+		let Rrgb: float3 = (Ra == 0) ? float3(repeating: 0) : ((float3(S.rgb * S.a) + float3(D.rgb * D.a * (1.0 - S.a))) / Ra)
 		return float4(Rrgb.r, Rrgb.g, Rrgb.b, Ra)
 	}
 
@@ -194,8 +194,8 @@ class ViewController: NSViewController {
 
 		let (r, g, b, a) = (0, 1, 2, 3) // byte offset
 
-		sourceData.withUnsafeMutableBytes { (sourceBuffer: UnsafeMutablePointer<UInt8>) -> Void in
-			destionationData.withUnsafeMutableBytes { (destinationBuffer: UnsafeMutablePointer<UInt8>) -> Void in
+		sourceData.withUnsafeMutableBytes { (sourceBuffer: UnsafeMutableRawBufferPointer) -> Void in
+			destionationData.withUnsafeMutableBytes { (destinationBuffer: UnsafeMutableRawBufferPointer) -> Void in
 				for y in 0 ..< height {
 					for x in 0 ..< width {
 						let index = (y * rowBytes) + (x * bytesPerPixel)
